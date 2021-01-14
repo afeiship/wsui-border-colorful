@@ -45,6 +45,10 @@ npm i @jswork/wsui-border-colorful
 </div>
 ```
 
+## resources
+- https://afeiship.github.io/wsui-border-colorful/
+- https://css-tricks.com/everything-you-need-to-know-about-date-in-javascript/
+
 ## license
 Code released under [the MIT license](https://github.com/afeiship/wsui-border-colorful/blob/master/LICENSE.txt).
 
