@@ -1,0 +1,45 @@
+/*!
+ * name: @jswork/wsui-border-colorful
+ * description: Colorful border for wsui.
+ * homepage: https://github.com/afeiship/wsui-border-colorful
+ * version: 1.0.0
+ * date: 2021-01-14 17:19:16
+ * license: MIT
+ */
+
+/*wsui-border-colorful Start*/
+@mixin wsui-border-colorful(
+  $in-options: (
+    border-radius: 12px,
+    border-width: 5px,
+    colors: (
+      #ff7a18,
+      #af002d,
+      #319197,
+    ),
+  )
+) {
+  $border-radius: map-get($map: $in-options, $key: border-radius );
+  $colors: map-get($map: $in-options, $key: colors );
+  $border-width: map-get($map: $in-options, $key: border-width );
+
+  position: relative;
+
+  > .is-body {
+    background: #fff;
+    border-radius: ($border-radius/1.5);
+  }
+
+  &:before {
+    content: "";
+    background: linear-gradient(130deg, nth($colors,1), nth($colors,2) 41.07%, nth($colors,3) 76.05%);
+    position: absolute;
+    top: -$border-width;
+    right: -$border-width;
+    bottom: -$border-width;
+    left: -$border-width;
+    z-index: -1;
+    border-radius: $border-radius;
+  }
+}
+/*wsui-border-colorful End*/

@@ -1,0 +1,16 @@
+@import "../dist/index.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  width: 80%;
+  margin: 50px auto;
+  max-width: 400px;
+  @include wsui-border-colorful();
+
+  > .is-body {
+    padding: 10px;
+  }
+}
